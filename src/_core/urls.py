@@ -10,7 +10,6 @@ from django.urls import path, include
 admin.site.site_header = "Administration"
 
 urlpatterns = [
-    path("", include("django_prometheus.urls")),
     path("admin/", admin.site.urls, ),
     path("api/v1/products/", include("products.api.v1.urls", namespace="products")),
 ]
