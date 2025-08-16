@@ -33,7 +33,6 @@ BUILTIN_APPS = [
 THIRD_PARTY_APPS = [
     "corsheaders",
     "rest_framework",
-    "drf_spectacular",
 ]
 
 APPS = [
@@ -125,7 +124,6 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
             'rest_framework.permissions.IsAuthenticated',
         ),
-    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_PAGINATION_CLASS": "_core.pagination.PageNumberPagination",
     "PAGE_SIZE": 20,
 }
