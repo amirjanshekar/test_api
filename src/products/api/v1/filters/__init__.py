@@ -1,1 +1,1 @@
-from .products import ProductsFilter  # noqa
+# from .products import ProductsFilter  # noqa
