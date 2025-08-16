@@ -3,17 +3,19 @@ from rest_framework.decorators import permission_classes
 from rest_framework.generics import ListCreateAPIView
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
+from django_filters import rest_framework as filters
 
 from products.models import Product
 from products.api.v1.serializers import ProductsSerializer
-
+from products.api.v1.filters import ProductsFilter
 
 
 @permission_classes([AllowAny])
 class ProductsListView(ListCreateAPIView):
     queryset = Product.objects.all()
-    print(queryset)
     serializer_class = ProductsSerializer
+    filter_backends = [filters.DjangoFilterBackend]
+    filterset_class = ProductsFilter
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data, many=True)
