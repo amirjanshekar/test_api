@@ -33,13 +33,11 @@ BUILTIN_APPS = [
 THIRD_PARTY_APPS = [
     "corsheaders",
     "rest_framework",
-    "rest_framework_simplejwt.token_blacklist",
     "django_better_admin_arrayfield",
     "drf_spectacular",
 ]
 
 APPS = [
-    "account",
     "products",
 ]
 
@@ -57,10 +55,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "_core.urls"
-AUTH_USER_MODEL = "account.User"
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
-    "account.auth.ModelBackendWithEmail",
 ]
 
 TEMPLATES = [
@@ -131,7 +127,6 @@ REST_FRAMEWORK = {
             'rest_framework.permissions.IsAuthenticated',
         ),
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
-    "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework_simplejwt.authentication.JWTAuthentication",),
     "DEFAULT_PAGINATION_CLASS": "_core.pagination.PageNumberPagination",
     "PAGE_SIZE": 20,
 }
@@ -162,7 +157,6 @@ SIMPLE_JWT = {
     "AUTH_HEADER_TYPES": ("Bearer",),
     "USER_ID_FIELD": "id",
     "USER_ID_CLAIM": "user_id",
-    "AUTH_TOKEN_CLASSES": ("rest_framework_simplejwt.tokens.AccessToken",),
     "TOKEN_TYPE_CLAIM": "token_type",
     "JTI_CLAIM": "jti",
     "SLIDING_TOKEN_REFRESH_EXP_CLAIM": "refresh_exp",

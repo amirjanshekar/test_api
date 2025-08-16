@@ -3,9 +3,6 @@ from .base import *  # NoQA
 
 # enable Browsable API Renderer
 REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] += ("rest_framework.renderers.BrowsableAPIRenderer",)  # noqa F405
-REST_FRAMEWORK["DEFAULT_AUTHENTICATION_CLASSES"] += (  # noqa F405
-    "rest_framework.authentication.SessionAuthentication",
-)
 
 
 INSTALLED_APPS += ["django_extensions", "debug_toolbar"]  # noqa F405
