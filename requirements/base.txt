@@ -1,0 +1,45 @@
+# django related
+Django~=4.2.5
+# django-admin-autocomplete-list-filter~=1.0.1
+django-admin-numeric-filter~=0.1.9
+django-ajax-selects~=3.0.2
+django-better-admin-arrayfield~=1.4.2
+django-celery-beat~=2.5.0
+django-cities~=0.6.2
+django-cors-headers~=4.2.0
+django-filter~=23.2
+django-model-utils~=4.3.1
+django-phonenumber-field~=7.1.0
+django-prometheus~=2.3.1
+django-admin-rangefilter~=0.11.1
+django-redis~=5.3.0
+django-resized~=1.0.2
+
+# drf related
+djangorestframework~=3.14.0
+djangorestframework-simplejwt~=5.3.0
+drf-extra-fields~=3.7.0
+
+# Others
+beautifulsoup4~=4.12.2
+celery~=5.3.4
+cryptography~=43.0.1
+jdatetime~=4.1.1
+lxml~=5.3.0
+openpyxl~=3.1.2
+phonenumbers~=8.13.19
+psycopg2-binary~=2.9.7
+pydifact~=0.1.6
+PyPDF2~=3.0.1
+pytest-snapshot~=0.9.0
+pytest-factoryboy~=2.6.0
+python-stdnum~=1.19
+redis~=5.0.0
+reportlab~=4.2.2
+requests~=2.31.0
+sentry-sdk~=1.39.1
+pytest-snapshot~=0.9.0
+pytest-factoryboy~=2.6.0
+weasyprint~=62.3
+gunicorn~=21.2.0
+mixer==7.2.2
